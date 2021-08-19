@@ -3,8 +3,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     #region Components References ...
-    private Rigidbody2D playerRigidbody;
-    private PlayerInputAction playerInput;
+    Rigidbody2D playerRigidbody;
+    PlayerInputAction playerInput;
     #endregion
 
     #region Attributes ...
@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] float acceleration = 2f;
     [SerializeField] float deceleration = 2f;
     [SerializeField] float velocityPower = 3f;
+
+    float playerScaleMultiplier = 10f;
     #endregion
 
     private void Awake()
@@ -25,13 +27,25 @@ public class Player : MonoBehaviour
         Run();
     }
 
+    private void FlipSprite(float inputX)
+    {
+        bool isMovingHorizontally = Mathf.Abs(inputX) > Mathf.Epsilon;
+
+        if(isMovingHorizontally)
+        {
+            transform.localScale =  new Vector2(Mathf.Sign(inputX) * playerScaleMultiplier, playerScaleMultiplier);
+        }
+    }
+
     private void Run()
     {
-        float inputVector = playerInput.Player.Movement.ReadValue<Vector2>().x;
+        float inputX = playerInput.Player.Movement.ReadValue<Vector2>().x;
 
-        float targetSpeed = inputVector * runSpeed;
+        FlipSprite(inputX);
+
+        float targetSpeed = inputX * runSpeed;
         float runSpeedDifference = targetSpeed - playerRigidbody.velocity.x;
-        float accelerationRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : deceleration;
+        float accelerationRate = (Mathf.Abs(targetSpeed) > Mathf.Epsilon) ? acceleration : deceleration;
         float movement = Mathf.Pow(Mathf.Abs(runSpeedDifference) * accelerationRate, velocityPower) * Mathf.Sign(runSpeedDifference);
 
         playerRigidbody.AddForce(movement * Vector2.right);
