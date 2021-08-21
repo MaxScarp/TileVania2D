@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
     float playerScaleMultiplier = 10f;
     bool isGrounded;
-    bool isJumping = false;
+    bool isJumping;
     #endregion
 
     private void Awake()
@@ -41,8 +41,12 @@ public class Player : MonoBehaviour
     {
         if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
-            isJumping = false;
             isGrounded = true;
+            if (playerRigidbody.velocity.y < Mathf.Epsilon && isJumping)
+            {
+                isJumping = false;
+                playerAnimator.SetBool("isJumping", isJumping);
+            }
         }
         else
         {
@@ -57,6 +61,7 @@ public class Player : MonoBehaviour
         {
             playerRigidbody.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
             isJumping = true;
+            playerAnimator.SetBool("isJumping", isJumping);
         }
     }
 

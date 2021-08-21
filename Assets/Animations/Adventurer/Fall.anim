@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Adventurer Ladder Climb
+  m_Name: Fall
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 9117589615072446209, guid: 89987247abef1c04388b5f11f1c7223a, type: 3}
+      value: {fileID: 1471770865315039615, guid: d802076dace224b40be35675a10c82e5, type: 3}
     - time: 0.14285715
-      value: {fileID: 4563388763735130806, guid: 89987247abef1c04388b5f11f1c7223a, type: 3}
-    - time: 0.2857143
-      value: {fileID: 5213330891487222806, guid: 89987247abef1c04388b5f11f1c7223a, type: 3}
-    - time: 0.42857143
-      value: {fileID: 4363000878124850441, guid: 89987247abef1c04388b5f11f1c7223a, type: 3}
+      value: {fileID: -4503069808665878579, guid: d802076dace224b40be35675a10c82e5, type: 3}
     attribute: m_Sprite
     path: Body
     classID: 212
@@ -46,16 +42,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 9117589615072446209, guid: 89987247abef1c04388b5f11f1c7223a, type: 3}
-    - {fileID: 4563388763735130806, guid: 89987247abef1c04388b5f11f1c7223a, type: 3}
-    - {fileID: 5213330891487222806, guid: 89987247abef1c04388b5f11f1c7223a, type: 3}
-    - {fileID: 4363000878124850441, guid: 89987247abef1c04388b5f11f1c7223a, type: 3}
+    - {fileID: 1471770865315039615, guid: d802076dace224b40be35675a10c82e5, type: 3}
+    - {fileID: -4503069808665878579, guid: d802076dace224b40be35675a10c82e5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5714286
+    m_StopTime: 0.2857143
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
