@@ -170,8 +170,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0008263111, y: -0.008660841}
-  m_Size: {x: 0.09143763, y: 0.13378887}
+  m_Offset: {x: -0.000052547457, y: -0.012701129}
+  m_Size: {x: 0.069763, y: 0.12496691}
   m_Direction: 0
 --- !u!114 &3705285287460854845
 MonoBehaviour:
@@ -190,5 +190,4 @@ MonoBehaviour:
   deceleration: 7
   velocityPower: 0.9
   frictionAmount: 0.2
-  jumpSpeed: 5.5
-  jumpCutMultiplier: 0.5
+  jumpSpeed: 11

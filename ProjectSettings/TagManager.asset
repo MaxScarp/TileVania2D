@@ -15,7 +15,7 @@ TagManager:
   - 
   - Ground
   - Wall
-  - 
+  - Ladder
   - 
   - 
   - 
@@ -44,9 +44,12 @@ TagManager:
   - name: Background
     uniqueID: 3021999023
     locked: 0
-  - name: Player&Enemy
-    uniqueID: 3248173905
-    locked: 0
   - name: Foreground
     uniqueID: 438275149
+    locked: 0
+  - name: Ladder
+    uniqueID: 562450339
+    locked: 0
+  - name: Player&Enemy
+    uniqueID: 3248173905
     locked: 0

@@ -21,10 +21,13 @@ public class Player : MonoBehaviour
     [Space(10f)]
     [Header("Jump")]
     [SerializeField] float jumpSpeed = 5f;
+    [Space(10f)]
+    [SerializeField] float climbSpeed = 5f;
 
     float playerScaleMultiplier = 10f;
     bool isGrounded;
     bool isJumping;
+    bool isClimbing;
     #endregion
 
     private void Awake()
@@ -34,7 +37,9 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        GroundedCheck();
         Run();
+        ClimbLadder();
     }
 
     private void GroundedCheck()
@@ -54,9 +59,40 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void ClimbLadder()
+    {
+        if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Ladder")) || isJumping)
+        {
+            playerRigidbody.gravityScale = 1f;
+            isClimbing = false;
+            playerAnimator.SetBool("isClimbingLadder", isClimbing);
+            return;
+        }
+
+        if ((isClimbing && isGrounded) || (playerRigidbody.velocity.y < Mathf.Epsilon && !isJumping && !isClimbing))
+        {
+            playerRigidbody.gravityScale = 1f;
+            isClimbing = false;
+            playerAnimator.SetBool("isClimbingLadder", isClimbing);
+            return;
+        }
+
+        float inputY = playerInput.Player.Movement.ReadValue<Vector2>().y;
+        Vector2 climbVelocity = new Vector2(playerRigidbody.velocity.x, inputY * climbSpeed);
+
+        playerRigidbody.velocity = climbVelocity;
+
+        bool playerHasVerticalSpeed = playerRigidbody.velocity.y > Mathf.Epsilon;
+        if (playerHasVerticalSpeed && !isGrounded)
+        {
+            playerRigidbody.gravityScale = 0f;
+            isClimbing = true;
+            playerAnimator.SetBool("isClimbingLadder", isClimbing);
+        }
+    }
+
     private void Jump(InputAction.CallbackContext context)
     {
-        GroundedCheck();
         if (isGrounded)
         {
             playerRigidbody.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
@@ -93,7 +129,6 @@ public class Player : MonoBehaviour
         #endregion
 
         #region Friction ...
-        GroundedCheck();
         if (isGrounded && Mathf.Abs(inputX) < Mathf.Epsilon)
         {
             float amount = Mathf.Min(Mathf.Abs(inputX), Mathf.Abs(frictionAmount));
