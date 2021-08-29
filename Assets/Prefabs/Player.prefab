@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8358112002710619420}
   - component: {fileID: 8358112002710619423}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1046793391
-  m_SortingLayer: 2
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1170358760127597774, guid: 372679462772ef143ad983c783b7ae7f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -94,8 +94,9 @@ GameObject:
   - component: {fileID: 8358112002961233104}
   - component: {fileID: 6063582939020575393}
   - component: {fileID: 4801568080319759806}
+  - component: {fileID: 2359610088819065103}
   - component: {fileID: 3705285287460854845}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,13 +167,39 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 8358112002961233105}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c3e8faeaa6053834d831973e97aad0a2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.000052547457, y: -0.012701129}
   m_Size: {x: 0.069763, y: 0.12496691}
   m_Direction: 0
+--- !u!61 &2359610088819065103
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358112002961233105}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &3705285287460854845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,3 +218,4 @@ MonoBehaviour:
   velocityPower: 0.9
   frictionAmount: 0.2
   jumpSpeed: 11
+  climbSpeed: 5

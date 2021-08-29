@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
     Rigidbody2D playerRigidbody;
     PlayerInputAction playerInput;
     Animator playerAnimator;
-    Collider2D playerCollider;
+    CapsuleCollider2D playerBodyCollider;
+    BoxCollider2D playerFeetCollider;
     #endregion
 
     #region Attributes ...
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour
 
     private void GroundedCheck()
     {
-        if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        if (playerFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             isGrounded = true;
             if (playerRigidbody.velocity.y < Mathf.Epsilon && isJumping)
@@ -61,7 +62,7 @@ public class Player : MonoBehaviour
 
     private void ClimbLadder()
     {
-        if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Ladder")) || isJumping)
+        if (!playerBodyCollider.IsTouchingLayers(LayerMask.GetMask("Ladder")) || isJumping)
         {
             playerRigidbody.gravityScale = 1f;
             isClimbing = false;
@@ -144,7 +145,8 @@ public class Player : MonoBehaviour
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
-        playerCollider = GetComponent<Collider2D>();
+        playerBodyCollider = GetComponent<CapsuleCollider2D>();
+        playerFeetCollider = GetComponent<BoxCollider2D>();
 
         playerInput = new PlayerInputAction();
         playerInput.Enable();
