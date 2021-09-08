@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: fad07be12077b654281bc82ccf0c7efa
+guid: 2103e52f86e8b0147a4aebb321c3ef01
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2007517164981648477
-    second: Castle Background Spritesheet_0
+      213: -1515603127067585740
+    second: Skeleton React_0
   - first:
-      213: -5239170796192821238
-    second: Castle Background Spritesheet_1
+      213: -974260186754260340
+    second: Skeleton React_1
+  - first:
+      213: 6619721271862762800
+    second: Skeleton React_2
+  - first:
+      213: 436870274612170266
+    second: Skeleton React_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 255
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -94,19 +100,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -130,7 +124,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -145,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Castle Background Spritesheet_0
+      name: Skeleton React_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 256
-        height: 256
+        x: 0
+        y: 0
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a305c456cdd324e0800000000000000
-      internalID: -2007517164981648477
+      spriteID: 4335aa66cfe77fae0800000000000000
+      internalID: -1515603127067585740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Castle Background Spritesheet_1
+      name: Skeleton React_1
       rect:
         serializedVersion: 2
-        x: 259
-        y: 1
-        width: 256
-        height: 256
+        x: 22
+        y: 0
+        width: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +174,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a00935f4be9ba47b0800000000000000
-      internalID: -5239170796192821238
+      spriteID: c82e4b1a58bba72f0800000000000000
+      internalID: -974260186754260340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton React_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d1a798c69fddb50800000000000000
+      internalID: 6619721271862762800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton React_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e8f2b3333101600800000000000000
+      internalID: 436870274612170266
       vertices: []
       indices: 
       edges: []

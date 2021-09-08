@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8358112002710619421
+--- !u!1 &7511213819558014891
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8358112002710619420}
-  - component: {fileID: 8358112002710619423}
-  m_Layer: 11
+  - component: {fileID: 7511213819558014888}
+  - component: {fileID: 7511213819558014889}
+  m_Layer: 13
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8358112002710619420
+--- !u!4 &7511213819558014888
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8358112002710619421}
+  m_GameObject: {fileID: 7511213819558014891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8358112002961233107}
+  m_Father: {fileID: 7511213820689832853}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8358112002710619423
+--- !u!212 &7511213819558014889
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8358112002710619421}
+  m_GameObject: {fileID: 7511213819558014891}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -68,21 +68,21 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1046793391
+  m_SortingLayerID: 1908390107
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1170358760127597774, guid: 372679462772ef143ad983c783b7ae7f, type: 3}
+  m_Sprite: {fileID: 4035959289877228764, guid: 268bd75a7332e1f429a0663015d47485, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.52, y: 0.39}
+  m_Size: {x: 0.09166667, y: 0.1375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &8358112002961233105
+--- !u!1 &7511213820689832852
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,45 +90,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8358112002961233107}
-  - component: {fileID: 8358112002961233104}
-  - component: {fileID: 6063582939020575393}
-  - component: {fileID: 4801568080319759806}
-  - component: {fileID: 2359610088819065103}
-  - component: {fileID: 3705285287460854845}
-  m_Layer: 11
-  m_Name: Player
-  m_TagString: Untagged
+  - component: {fileID: 7511213820689832853}
+  - component: {fileID: 7511213820689832848}
+  - component: {fileID: 7511213820689832851}
+  - component: {fileID: 7511213820689832850}
+  - component: {fileID: 7511213820689832878}
+  - component: {fileID: 7511213820689832849}
+  m_Layer: 13
+  m_Name: Skeleton
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8358112002961233107
+--- !u!4 &7511213820689832853
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8358112002961233105}
+  m_GameObject: {fileID: 7511213820689832852}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.54, y: -7.22, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: -12.95, y: -7.335, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8358112002710619420}
+  - {fileID: 7511213819558014888}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8358112002961233104
+--- !u!95 &7511213820689832848
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8358112002961233105}
+  m_GameObject: {fileID: 7511213820689832852}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 58956cf30d0b2a347a2ad088e44f2126, type: 2}
+  m_Controller: {fileID: 9100000, guid: 62631e8c84b704d4498b39c5722c1a3a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -137,15 +137,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!50 &6063582939020575393
+--- !u!50 &7511213820689832851
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8358112002961233105}
-  m_BodyType: 0
+  m_GameObject: {fileID: 7511213820689832852}
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -158,36 +158,54 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!70 &4801568080319759806
-CapsuleCollider2D:
+--- !u!60 &7511213820689832850
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8358112002961233105}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: c3e8faeaa6053834d831973e97aad0a2, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.000052547457, y: -0.010097695}
-  m_Size: {x: 0.069763, y: 0.11976004}
-  m_Direction: 0
---- !u!61 &2359610088819065103
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8358112002961233105}
+  m_GameObject: {fileID: 7511213820689832852}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0019258261, y: -0.07134466}
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.9166667, y: 1.3333334}
+    newSize: {x: 0.09166667, y: 0.1375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.027190845, y: 0.43987912}
+      - {x: -0.26751232, y: 0.36777878}
+      - {x: -0.25132465, y: 0.055077553}
+      - {x: -0.43882847, y: -0.038249016}
+      - {x: -0.44868216, y: -0.6604678}
+      - {x: 0.13643456, y: -0.6701185}
+      - {x: 0.15288353, y: 0.19665241}
+      - {x: 0.35393876, y: 0.38380402}
+      - {x: 0.27673405, y: 0.6763174}
+--- !u!61 &7511213820689832878
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511213820689832852}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.36845255, y: -0.8801999}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -198,24 +216,18 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.04998169, y: 0.0046209767}
+  m_Size: {x: 0.27147198, y: 0.6601057}
   m_EdgeRadius: 0
---- !u!114 &3705285287460854845
+--- !u!114 &7511213820689832849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8358112002961233105}
+  m_GameObject: {fileID: 7511213820689832852}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 208dddb85829d8a46ae075d300f380cd, type: 3}
+  m_Script: {fileID: 11500000, guid: c799f263201f175498c9d6fecb4dbaf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 8
-  acceleration: 7
-  deceleration: 7
-  velocityPower: 0.9
-  frictionAmount: 0.2
-  jumpSpeed: 11
-  climbSpeed: 5
+  walkSpeed: 0.5

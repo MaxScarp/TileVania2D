@@ -23,12 +23,14 @@ public class Player : MonoBehaviour
     [Header("Jump")]
     [SerializeField] float jumpSpeed = 5f;
     [Space(10f)]
+    [Header("Climb")]
     [SerializeField] float climbSpeed = 5f;
 
     float playerScaleMultiplier = 10f;
     bool isGrounded;
     bool isJumping;
     bool isClimbing;
+    bool isAlive;
     #endregion
 
     private void Awake()
@@ -38,9 +40,32 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!isAlive) { return; }
+
         GroundedCheck();
         Run();
         ClimbLadder();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (isAlive)
+        {
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                Die();
+            }
+            else if (collision.gameObject.CompareTag("Hazard"))
+            {
+                Die();
+            }
+        }
+    }
+
+    private void Die()
+    {
+        playerAnimator.SetTrigger("isDying");
+        isAlive = false;
     }
 
     private void GroundedCheck()
@@ -150,6 +175,8 @@ public class Player : MonoBehaviour
 
         playerInput = new PlayerInputAction();
         playerInput.Enable();
+
+        isAlive = true;
 
         playerInput.Player.Jump.performed += Jump;
     }
