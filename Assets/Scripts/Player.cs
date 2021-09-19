@@ -62,6 +62,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void SetRunSpeed(float runSpeed)
+    {
+        this.runSpeed = runSpeed;
+    }
+
     private void Die()
     {
         playerAnimator.SetTrigger("isDying");
