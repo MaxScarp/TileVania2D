@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -69,8 +70,17 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
+        StartCoroutine(DeathLogic());
+    }
+
+    private IEnumerator DeathLogic()
+    {
         playerAnimator.SetTrigger("isDying");
         isAlive = false;
+
+        yield return new WaitForSeconds(2);
+
+        FindObjectOfType<GameSession>().ProcessPlayerDeath();
     }
 
     private void GroundedCheck()
