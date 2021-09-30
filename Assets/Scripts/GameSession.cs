@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
+    [SerializeField] int playerPoints = 0;
 
     int firstLevel = 0;
 
@@ -44,5 +45,10 @@ public class GameSession : MonoBehaviour
     {
         SceneManager.LoadScene(firstLevel);
         Destroy(gameObject);
+    }
+
+    public void AddPoint(int points)
+    {
+        playerPoints += points;
     }
 }
