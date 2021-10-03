@@ -21,7 +21,7 @@ public class SkeletonMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(isWalking)
+        if (isWalking)
         {
             Walk();
         }

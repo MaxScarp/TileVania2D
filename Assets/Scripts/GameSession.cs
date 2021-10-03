@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,19 +7,20 @@ public class GameSession : MonoBehaviour
     [SerializeField] int playerLives = 3;
     [SerializeField] int playerPoints = 0;
 
+    [SerializeField] TextMeshProUGUI textLives;
+    [SerializeField] TextMeshProUGUI textPoints;
+
     int firstLevel = 0;
 
-    private void Awake()
+    private void Start()
     {
-        int numberOfGameSession = FindObjectsOfType<GameSession>().Length;
-        if (numberOfGameSession > 1)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        textLives.text = playerLives.ToString();
+        textPoints.text = playerPoints.ToString();
     }
 
     public void ProcessPlayerDeath()
@@ -39,16 +41,20 @@ public class GameSession : MonoBehaviour
 
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
+
+        UpdateUI();
     }
 
     private void ResetGameSession()
     {
         SceneManager.LoadScene(firstLevel);
-        Destroy(gameObject);
+        Destroy(FindObjectOfType<Pickups>().gameObject);
+        Destroy(FindObjectOfType<Singleton>().gameObject);
     }
 
     public void AddPoint(int points)
     {
         playerPoints += points;
+        UpdateUI();
     }
 }

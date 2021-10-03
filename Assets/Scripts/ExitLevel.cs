@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -34,6 +33,7 @@ public class ExitLevel : MonoBehaviour
 
         yield return new WaitForSeconds(secondsToWait);
 
+        Destroy(FindObjectOfType<Pickups>().gameObject);
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 }
